@@ -1,4 +1,12 @@
-# Bridge challenge backend connectors
+## Sacramentix's repositorie for Bridge challenge backend connectors
+
+This repositorie is my attempt to respond to this [challenge](https://github.com/bridgeapi-engineering/challenge-backend-connectors).
+
+After the 2h I've added few thing mostly to display clear error when env is incomplete and few fix on this branch [after_16h](https://github.com/Sacramentix/bridge-test-technique/tree/after_16h).
+
+Below there is the original README.md
+
+## Bridge challenge backend connectors
 
 This application must retrieve and aggregate accounts and transactions data as described below :
 
