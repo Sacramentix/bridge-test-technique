@@ -34,6 +34,6 @@ export type GetTransactions = {
     links: { self: TransactionsRoute , next?: TransactionsRoute }
 }
 
-export type GetAccountsAggregate = Account & {
+export type AccountWithTransaction = Account & {
     transactions: Transaction[];
-}
+};
