@@ -2,9 +2,6 @@ import { config } from "dotenv";
 import z, { ZodError } from "zod";
 config();
 
-const api_key = process.env['API_KEY'];
-const endpoint = process.env['API_ENDPOINT'];
-
 const envSchema = z.object({
     API_KEY: z.string().uuid("must be an uuid"),
     API_ENDPOINT: z.string().url("must be an url")
