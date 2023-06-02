@@ -62,5 +62,5 @@ export async function getAccountsWithTransactions():Promise<AccountWithTransacti
                 transactions: await getAccountTransactions(a.acc_number)
             })
     ));
-    return [...accountsWithTransactions.values()];
+    return accountsWithTransactions;
 }
