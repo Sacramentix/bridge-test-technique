@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { Account, AccountsRoute, GetAccounts, GetTransactions, PageParams, Routes, Transaction } from "./type";
+import type { Account, AccountWithTransaction, GetAccounts, GetTransactions, Routes, Transaction } from "./type";
 import { env } from "./env";
 
 /**
@@ -17,7 +17,7 @@ export async function dsagueApi(route:Routes) {
  * note: The api still return a links.next even if there is no more accounts.
  * So it throw an error because we get to query a ressource that doesn't exist
  */
-export async function getAllAccounts() {
+export async function getAllAccounts():Promise<Account[]> {
     const accounts = new Map<string, Account>();
     let result: GetAccounts;
     try {
@@ -37,7 +37,7 @@ export async function getAllAccounts() {
  * note: The api still return a links.next even if there is no more accounts.
  * So it throw an error because we get to query a ressource that doesn't exist
  */
-export async function getAccountTransactions(acc_number:string) {
+export async function getAccountTransactions(acc_number:string):Promise<Transaction[]>  {
     const transactions = new Map<string, Transaction>();
     let result: GetTransactions;
     try {
@@ -53,7 +53,7 @@ export async function getAccountTransactions(acc_number:string) {
  * Get all accounts with their transactions
  * @returns an array with all accounts with their transactions
  */
-export async function getAccountsWithTransactions() {
+export async function getAccountsWithTransactions():Promise<AccountWithTransaction[]> {
     const accounts = await getAllAccounts();
     const accountsWithTransactions = await Promise.all(
         accounts.map(async a =>
