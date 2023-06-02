@@ -8,7 +8,7 @@ import { env } from "./env";
  * @returns the data returned by the api 
  */
 export async function dsagueApi(route:Routes) {
-    return axios.get(env.endpoint+route, {headers:{" X-API-KEY": env.api_key}}).then(r=>r.data);
+    return axios.get(env.API_ENDPOINT+route, {headers:{" X-API-KEY": env.API_KEY}}).then(r=>r.data);
 }
 
 /**
