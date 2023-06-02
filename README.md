@@ -2,7 +2,7 @@
 
 This repositorie is my attempt to respond to this [challenge](https://github.com/bridgeapi-engineering/challenge-backend-connectors).
 
-After the 2h I've added few thing mostly to display clear error when env is incomplete and few fix on this branch [after_16h](https://github.com/Sacramentix/bridge-test-technique/tree/after_16h).
+After the 2 hours of the challenge, I've added few thing, mostly to display clear error when env is incomplete and also fix silly mistake on this branch [after_16h](https://github.com/Sacramentix/bridge-test-technique/tree/after_16h).
 
 Below there is the original README.md
 
